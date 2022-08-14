@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package message.v1;
+
+message MessageRequest {
+  string text = 1;
+}
+
+message MessageResponse {
+  string text = 1;
+}
+
+service MessageService {
+  rpc Message(MessageRequest) returns(MessageResponse) {}
+}
